@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logo a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+#nav {
+    margin: 20px;
+}
+
+#nav a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+#lcol {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form Styles */
+#calcform {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.btn {
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+#calcform button img {
+    filter: invert(100%);
+}
+
+textarea {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+/* Table Styles */
+#cal2tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#cal2tbl th, #cal2tbl td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#cal2tbl th {
+    background-color: #f2f2f2;
+}
+
+#cal2tbl td:nth-child(3) {
+    background-color: #f9f9f9;
+    border: dashed 1px #333;
+}
+
+/* Button Styles */
+a.try-it {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a.try-it:hover {
+    background-color: #0056b3;
+}

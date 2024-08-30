@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="/lib/tagmng8.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/lib/rapid02.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/lib/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/lib/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/lib/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/lib/favicon/manifest.json">
+    <link rel="mask-icon" href="/lib/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/lib/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <title>Base Converter | Number Conversion</title>
+    <meta name="description" content="Base conversion calculator with steps: binary, decimal, octal, hex conversion.">
+    <link rel="canonical" href="https://www.example.com/base-converter.html">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="conversion.css">
+    <style>
+        h1 {
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        #wrapper td {
+            padding: .75rem;
+        }
+
+        #calcform {
+            max-width: 500px;
+            padding: 20px;
+            background: #f0eedc;
+            border: 1px solid #e0e0e0;
+            border-radius: 7px;
+        }
+
+        #calcform button img {
+            filter: invert(100%);
+        }
+
+        #cal2tbl th {
+            font-weight: normal;
+        }
+
+        #cal2tbl td {
+            line-height: 1;
+        }
+
+        #cal2tbl th p {
+            word-break: break-all;
+        }
+
+        #cal2tbl p {
+            line-height: 1;
+        }
+
+        #cal2tbl tr td {
+            word-wrap: break-word;
+            max-width: 120px;
+        }
+
+        #cal2tbl tbody tr td:nth-child(3) {
+            background: #f8f8f8;
+            border: dashed 1px #333;
+        }
+
+        #cal {
+            background: #e9ecef;
+            height: auto;
+        }
+
+        .btn span {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        #header-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-title">Made by Sunit Katuwal</div>
+    </div>
+
+    <div id="wrapper">
+        <div id="lcol">
+            <div id="doc">
+                <h1>Base Converter</h1>
+                <p>Convert number from any base to any base:</p>
+                <form id="calcform" autocomplete="off">
+                    <div class="form-group">
+                        <label for="x">Enter number</label>
+                        <input type="text" id="x" name="x" class="form-control form-control-lg" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">From Base</label>
+                        <select name="sel1" id="sel1" class="form-control">
+                            <option value="2">2 (binary)</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option value="8">8 (octal)</option>
+                            <option>9</option>
+                            <option value="10" selected>10 (decimal)</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option value="16">16 (hex)</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                            <option>32</option>
+                            <option>33</option>
+                            <option>34</option>
+                            <option>35</option>
+                            <option>36</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel2">To Base</label>
+                        <select name="sel2" id="sel2" class="form-control">
+                            <option value="2">2 (binary)</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option value="8">8 (octal)</option>
+                            <option>9</option>
+                            <option value="10">10 (decimal)</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option value="16" selected>16 (hex)</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                            <option>32</option>
+                            <option>33</option>
+                            <option>34</option>
+                            <option>35</option>
+                            <option>36</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" title="Convert" class="btn btn-success" onclick="onconvert()"><span>=</span> Convert</button>
+                        <button type="reset" title="Reset" class="btn btn-secondary" onclick="onrst()"><span>&times;</span> Reset</button>
+                        <button type="button" title="Swap conversion" class="btn btn-secondary" onclick="swap()"><span>&#8645;</span> Swap</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="y" id="ylabel">Result number</label>
+                        <textarea rows="2" id="y" class="form-control form-control-lg" readonly></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" value="Copy" onclick="copy()" class="btn btn-secondary">
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <div id="calgroup" class="form-group">
+                        <label>Calculation</label>
+                        <div id="cal" class="form-control">
+                            <div id="cal1">
+                                <p>Base <span id="b1txt"></span> to decimal calculation:</p>
+                                <p id="cal1txt"></p>
+                            </div>
+                            <div id="cal2">
+                                <p>Decimal to base <span id="b2txt"></span> calculation:</p>
+                                <p id="cal2dec"></p>
+                                <p>Divide by the base to get the digits from the remainders:</p>
+                                <table id="cal2tbl" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Division</th>
+                                            <th>Quotient</th>
+                                            <th><p>Remainder</p>(Digit)</th>
+                                            <th>Digit #</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                                <p id="cal2result"></p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <p>Convert between bases from 2 to 36. For example, you can convert the number "1010" from binary to decimal, or the number "A" from hexadecimal to decimal.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function onconvert() {
+            var s = document.getElementById("x").value.trim();
+            var b1 = document.getElementById("sel1").value;
+            var b2 = document.getElementById("sel2").value;
+            var y = parseInt(s, b1).toString(b2);
+            document.getElementById("y").value = y.toUpperCase();
+
+            document.getElementById("cal").style.height = "auto";
+
+            // Base to decimal calculation
+            document.getElementById("cal1txt").innerHTML = s + "<sub>" + b1 + "</sub>" + " = " + parseInt(s, b1) + "<sub>10</sub>";
+
+            // Decimal to base calculation
+            var n = parseInt(s, b1);
+            var b2int = parseInt(b2);
+            document.getElementById("b1txt").innerHTML = b1;
+            document.getElementById("b2txt").innerHTML = b2;
+            document.getElementById("cal2dec").innerHTML = n + "<sub>10</sub>";
+            var tbl = document.getElementById("cal2tbl").getElementsByTagName("tbody")[0];
+            tbl.innerHTML = "";
+
+            var rem = 0, digits = [];
+            while (n > 0) {
+                rem = n % b2int;
+                n = Math.floor(n / b2int);
+                digits.push(rem);
+            }
+            digits.reverse();
+            for (var i = 0; i < digits.length; i++) {
+                var row = tbl.insertRow();
+                row.insertCell(0).innerHTML = digits[i] + " * " + b2 + "^" + (digits.length - i - 1);
+                row.insertCell(1).innerHTML = n;
+                row.insertCell(2).innerHTML = digits[i];
+                row.insertCell(3).innerHTML = "Digit #" + (i + 1);
+            }
+
+            document.getElementById("cal2result").innerHTML = y.toUpperCase() + "<sub>" + b2 + "</sub>";
+        }
+
+        function onrst() {
+            document.getElementById("cal").style.height = "0px";
+        }
+
+        function swap() {
+            var sel1 = document.getElementById("sel1");
+            var sel2 = document.getElementById("sel2");
+
+            var temp = sel1.value;
+            sel1.value = sel2.value;
+            sel2.value = temp;
+
+            document.getElementById("y").value = "";
+            document.getElementById("cal").style.height = "0px";
+        }
+
+        function copy() {
+            var y = document.getElementById("y");
+            y.select();
+            document.execCommand("copy");
+        }
+    </script>
+</body>
+
+</html>
